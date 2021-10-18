@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <Name>DexCMS.Core.Client</Name>
+    <RootNamespace>DexCMS.Core.Client</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>f8747e68-8724-417a-8e60-2c1bc5a36cdd</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>utilities.js</StartupFile>
+    <StartWebBrowser>False</StartWebBrowser>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <ProjectView>ProjectFiles</ProjectView>
+    <StartWebBrowser>false</StartWebBrowser>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Configurations\controlpanel.core.routes.js" />
+    <Compile Include="Configurations\controlpanel.core.navigation.js" />
+    <Compile Include="Grunt\application\clean.js" />
+    <Compile Include="Grunt\application\copy.js" />
+    <Compile Include="Grunt\application\loadTasks.js" />
+    <Compile Include="Grunt\application\registerTasks.js" />
+    <Compile Include="Grunt\application\xmlpoke.js" />
+    <Compile Include="Grunt\index.js" />
+    <Compile Include="Grunt\website\xmlpoke.js" />
+    <Compile Include="Grunt\website\clean.js" />
+    <Compile Include="Grunt\website\copy.js" />
+    <Compile Include="Grunt\website\jsonGenerator.js" />
+    <Compile Include="Grunt\website\symlink.js" />
+    <Compile Include="Grunt\website\uglify.js" />
+    <Compile Include="Grunt\website\loadTasks.js" />
+    <Compile Include="Grunt\website\registerTasks.js" />
+    <Compile Include="Grunt\website\replace.js" />
+    <Compile Include="Grunt\website\sass.js" />
+    <Compile Include="Grunt\website\watch.js" />
+    <Compile Include="Scripts\Applications\ControlPanel\controlpanel.bootstrap.js" />
+    <Compile Include="Scripts\Applications\ControlPanel\controlpanel.js" />
+    <Compile Include="Scripts\Applications\ControlPanel\controlpanel.require.js" />
+    <Compile Include="Scripts\Applications\ControlPanel\controlpanel.settings.js" />
+    <Compile Include="Scripts\Applications\ControlPanel\Globals\Controllers\index.js" />
+    <Compile Include="Scripts\Applications\ControlPanel\Globals\Controllers\layout.controller.js" />
+    <Compile Include="Scripts\Applications\ControlPanel\Globals\Directives\dexcmsAttention.js" />
+    <Compile Include="Scripts\Applications\ControlPanel\Globals\Directives\dexcmsCalculateGrid.js" />
+    <Compile Include="Scripts\Applications\ControlPanel\Globals\Directives\dexcmsFixedTop.js" />
+    <Compile Include="Scripts\Applications\ControlPanel\Globals\Directives\dexcmsHorizontalNav.js" />
+    <Compile Include="Scripts\Applications\ControlPanel\Globals\Directives\dexcmsHtmlEditor.js" />
+    <Compile Include="Scripts\Applications\ControlPanel\Globals\Directives\index.js" />
+    <Compile Include="Scripts\Applications\ControlPanel\Globals\Filters\htmlTrusted.js" />
+    <Compile Include="Scripts\Applications\ControlPanel\Globals\Filters\index.js" />
+    <Compile Include="Scripts\Applications\ControlPanel\Globals\index.js" />
+    <Compile Include="Scripts\Applications\ControlPanel\Modules\Core\Users\index.js" />
+    <Compile Include="Scripts\Applications\ControlPanel\Modules\Core\Users\users.editor.controller.js" />
+    <Compile Include="Scripts\Applications\ControlPanel\Modules\Core\Users\users.list.controller.js" />
+    <Compile Include="Scripts\Applications\ControlPanel\Modules\Core\Users\users.service.js" />
+    <Compile Include="Scripts\Applications\ControlPanel\Modules\Core\Roles\roles.editor.controller.js" />
+    <Compile Include="Scripts\Applications\ControlPanel\Modules\Core\Roles\roles.list.controller.js" />
+    <Compile Include="Scripts\Applications\ControlPanel\Modules\Core\Roles\roles.service.js" />
+    <Compile Include="Scripts\Applications\ControlPanel\Modules\Core\Roles\index.js" />
+    <Compile Include="Scripts\Applications\Secure\Globals\index.js" />
+    <Compile Include="Scripts\Applications\Secure\Modules\Tickets\CheckIns\checkins.list.controller.js" />
+    <Compile Include="Scripts\Applications\Secure\Modules\Tickets\CheckIns\checkins.service.js" />
+    <Compile Include="Scripts\Applications\Secure\Modules\Tickets\CheckIns\index.js" />
+    <Compile Include="Scripts\Applications\Secure\Modules\Tickets\Checkout\checkout.list.controller.js" />
+    <Compile Include="Scripts\Applications\Secure\Modules\Tickets\Checkout\index.js" />
+    <Compile Include="Scripts\Applications\Secure\Modules\Tickets\Checkout\publicEvents.service.js" />
+    <Compile Include="Scripts\Applications\Secure\Modules\Tickets\Complete\complete.details.controller.js" />
+    <Compile Include="Scripts\Applications\Secure\Modules\Tickets\Complete\index.js" />
+    <Compile Include="Scripts\Applications\Secure\Modules\Tickets\Invoice\index.js" />
+    <Compile Include="Scripts\Applications\Secure\Modules\Tickets\Invoice\invoice.details.controller.js" />
+    <Compile Include="Scripts\Applications\Secure\Modules\Tickets\Orders\index.js" />
+    <Compile Include="Scripts\Applications\Secure\Modules\Tickets\Orders\orders.controller.js" />
+    <Compile Include="Scripts\Applications\Secure\Modules\Tickets\Payment\index.js" />
+    <Compile Include="Scripts\Applications\Secure\Modules\Tickets\Payment\payment.details.controller.js" />
+    <Compile Include="Scripts\Applications\Secure\Modules\Tickets\TicketHolders\index.js" />
+    <Compile Include="Scripts\Applications\Secure\Modules\Tickets\TicketHolders\ticketHolders.editor.controller.js" />
+    <Compile Include="Scripts\Applications\Secure\Modules\Tickets\TicketHolders\ticketHolders.service.js" />
+    <Compile Include="Scripts\Applications\Secure\secure.bootstrap.js" />
+    <Compile Include="Scripts\Applications\Secure\secure.js" />
+    <Compile Include="Scripts\Applications\Secure\secure.require.js" />
+    <Compile Include="Scripts\Applications\Secure\secure.settings.js" />
+    <Compile Include="Scripts\Globals\Shared\Directives\dataTable.js" />
+    <Compile Include="Scripts\Globals\Shared\Directives\filteredCollection.js" />
+    <Compile Include="Scripts\Globals\Shared\Directives\index.js" />
+    <Compile Include="Scripts\Globals\Shared\Filters\index.js" />
+    <Compile Include="Scripts\Globals\Shared\Filters\pageSplice.js" />
+    <Compile Include="Scripts\Globals\Shared\index.js" />
+    <Compile Include="Scripts\Globals\Shared\Infrastructure\routesBuilder.js" />
+    <Compile Include="Scripts\Globals\Shared\Services\cacheBuster.js" />
+    <Compile Include="Scripts\Globals\Shared\Services\dateCleaner.js" />
+    <Compile Include="Scripts\Globals\Shared\Services\index.js" />
+    <Compile Include="Scripts\Globals\Shared\shared.js" />
+    <Compile Include="Scripts\Globals\Shared\shared.settings.js" />
+    <Compile Include="utilities.js" />
+    <Compile Include="Configurations\globals.core.settings.js" />
+    <Compile Include="Configurations\secure.core.settings.js" />
+    <Compile Include="Configurations\controlpanel.core.settings.js" />
+    <Compile Include="Configurations\index.js" />
+    <Compile Include="Scripts\Applications\ControlPanel\Dashboard\dashboard.controller.js" />
+    <Compile Include="Scripts\Applications\ControlPanel\Dashboard\index.js" />
+    <Content Include="package.json" />
+    <Content Include="README.md" />
+    <Content Include="Sass\Applications\ControlPanel\Components\_table.scss" />
+    <Content Include="Sass\Applications\ControlPanel\Components\_icons.scss" />
+    <Content Include="Sass\Applications\ControlPanel\Components\_panel.scss" />
+    <Content Include="Sass\Applications\ControlPanel\Components\_dropdown-menu.scss" />
+    <Content Include="Sass\Applications\ControlPanel\Components\_drop-box.scss" />
+    <Content Include="Sass\Applications\ControlPanel\Components\_accordion.scss" />
+    <Content Include="Sass\Applications\ControlPanel\Components\_attention-box.scss" />
+    <Content Include="Sass\Applications\ControlPanel\Components\_nav.scss" />
+    <Content Include="Sass\Applications\ControlPanel\Components\_reorder.scss" />
+    <Content Include="Sass\Applications\ControlPanel\Components\_dnd-drag.scss" />
+    <Content Include="Sass\Applications\ControlPanel\Components\_select-images.scss" />
+    <Content Include="Sass\Applications\ControlPanel\Components\_pagination.scss" />
+    <Content Include="Sass\Applications\ControlPanel\Layout\_basic-tags.scss" />
+    <Content Include="Sass\Applications\ControlPanel\Layout\_footer.scss" />
+    <Content Include="Sass\Applications\ControlPanel\Components\_form.scss" />
+    <Content Include="Sass\Applications\ControlPanel\Layout\_navbar.scss" />
+    <Content Include="Sass\Applications\ControlPanel\Layout\_shortcuts.scss" />
+    <Content Include="Sass\Applications\ControlPanel\Layout\_layout.scss" />
+    <Content Include="Sass\Applications\ControlPanel\Layout\_header.scss" />
+    <Content Include="Sass\Applications\ControlPanel\Layout\_sidebar.scss" />
+    <Content Include="Sass\Applications\ControlPanel\_core-helpers.scss" />
+    <Content Include="Sass\Applications\ControlPanel\_core-components.scss" />
+    <Content Include="Sass\Applications\ControlPanel\_core-layout.scss" />
+    <Content Include="Sass\Applications\ControlPanel\_core-variables.scss" />
+    <Content Include="Sass\Applications\ControlPanel\_core.scss" />
+    <Content Include="Sass\Applications\PublicSite\Components\_content-title.scss" />
+    <Content Include="Sass\Applications\PublicSite\Components\_content-images.scss" />
+    <Content Include="Sass\Applications\PublicSite\Placeholders\_button-appearance.scss" />
+    <Content Include="Sass\Applications\PublicSite\_core.scss" />
+    <Content Include="Sass\Applications\PublicSite\Layout\_header.scss" />
+    <Content Include="Sass\Applications\PublicSite\Layout\_left-sidebar-only.scss" />
+    <Content Include="Sass\Applications\PublicSite\Layout\_left-sidebar.scss" />
+    <Content Include="Sass\Applications\PublicSite\Layout\_right-sidebar-only.scss" />
+    <Content Include="Sass\Applications\PublicSite\Layout\_right-sidebar.scss" />
+    <Content Include="Sass\Applications\PublicSite\Layout\_footer.scss" />
+    <Content Include="Sass\Applications\PublicSite\Layout\_two-column.scss" />
+    <Content Include="Sass\Applications\PublicSite\Layout\_three-column.scss" />
+    <Content Include="Sass\Applications\PublicSite\Layout\_one-column.scss" />
+    <Content Include="Sass\Applications\PublicSite\Layout\_topbar.scss" />
+    <Content Include="Sass\Applications\PublicSite\Layout\_sidemenu.scss" />
+    <Content Include="Sass\Applications\PublicSite\Layout\_basic-tags.scss" />
+    <Content Include="Sass\Applications\PublicSite\Placeholders\_content-box.scss" />
+    <Content Include="Sass\Applications\PublicSite\_core-components.scss" />
+    <Content Include="Sass\Applications\PublicSite\_core-helpers.scss" />
+    <Content Include="Sass\Applications\PublicSite\_core-layout.scss" />
+    <Content Include="Sass\Applications\PublicSite\_core-placeholders.scss" />
+    <Content Include="Sass\Applications\PublicSite\_core-variables.scss" />
+    <Content Include="Sass\Editor\_editor.scss" />
+    <Content Include="Sass\Editor\_editorVariables.scss" />
+    <Content Include="Sass\Keyframes\_spin.scss" />
+    <Content Include="Sass\_keyframes.scss" />
+    <Content Include="Sass\Mixins\_customTransition.scss" />
+    <Content Include="Sass\_mixins.scss" />
+    <Content Include="Sass\Applications\PublicSite\Components\_content-blocks.scss" />
+    <Content Include="Sass\Applications\PublicSite\Components\_forms.scss" />
+    <Content Include="Sass\Applications\PublicSite\Components\_grid.scss" />
+    <Content Include="Sass\Applications\PublicSite\Components\_lists.scss" />
+    <Content Include="Sass\Applications\PublicSite\Components\_panels.scss" />
+    <Content Include="Sass\Applications\PublicSite\Components\_slider.scss" />
+    <Content Include="Sass\Placeholders\_clearfix.scss" />
+    <Content Include="Sass\_placeholders.scss" />
+    <Content Include="Sass\_variables.scss" />
+    <Content Include="Scripts\Applications\ControlPanel\Dashboard\dashboard.view.html" />
+    <Content Include="Scripts\Applications\ControlPanel\Globals\Directives\_dexcmsHorizontalNav.html" />
+    <Content Include="Scripts\Applications\ControlPanel\Modules\Core\Users\users.editor.html" />
+    <Content Include="Scripts\Applications\ControlPanel\Modules\Core\Users\users.list.html" />
+    <Content Include="Scripts\Applications\ControlPanel\Modules\Core\Users\_users.list.buttons.html" />
+    <Content Include="Scripts\Applications\ControlPanel\Modules\Core\Roles\roles.editor.html" />
+    <Content Include="Scripts\Applications\ControlPanel\Modules\Core\Roles\roles.list.html" />
+    <Content Include="Scripts\Applications\ControlPanel\Modules\Core\Roles\_roles.list.buttons.html" />
+    <Content Include="Scripts\Applications\Secure\Modules\Tickets\CheckIns\checkins.list.html" />
+    <Content Include="Scripts\Applications\Secure\Modules\Tickets\CheckIns\checkins.modal.html" />
+    <Content Include="Scripts\Applications\Secure\Modules\Tickets\Checkout\checkout.list.html" />
+    <Content Include="Scripts\Applications\Secure\Modules\Tickets\Complete\complete.details.html" />
+    <Content Include="Scripts\Applications\Secure\Modules\Tickets\Invoice\invoice.details.html" />
+    <Content Include="Scripts\Applications\Secure\Modules\Tickets\Orders\orders.list.html" />
+    <Content Include="Scripts\Applications\Secure\Modules\Tickets\Payment\payment.details.html" />
+    <Content Include="Scripts\Applications\Secure\Modules\Tickets\TicketHolders\ticketHolders.editor.html" />
+    <Content Include="Scripts\Globals\Shared\Directives\_dataTable.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Configurations\" />
+    <Folder Include="Grunt\" />
+    <Folder Include="Grunt\application\" />
+    <Folder Include="Grunt\website\" />
+    <Folder Include="Sass\" />
+    <Folder Include="Sass\Applications\ControlPanel\" />
+    <Folder Include="Sass\Applications\ControlPanel\Layout\" />
+    <Folder Include="Sass\Applications\ControlPanel\Components\" />
+    <Folder Include="Sass\Applications\PublicSite\Layout\" />
+    <Folder Include="Sass\Applications\PublicSite\Placeholders\" />
+    <Folder Include="Sass\Editor\" />
+    <Folder Include="Sass\Keyframes\" />
+    <Folder Include="Sass\Mixins\" />
+    <Folder Include="Sass\Applications\" />
+    <Folder Include="Sass\Applications\PublicSite\" />
+    <Folder Include="Sass\Applications\PublicSite\Components\" />
+    <Folder Include="Sass\Placeholders\" />
+    <Folder Include="Scripts\" />
+    <Folder Include="Scripts\Applications\" />
+    <Folder Include="Scripts\Applications\ControlPanel\" />
+    <Folder Include="Scripts\Applications\ControlPanel\Dashboard\" />
+    <Folder Include="Scripts\Applications\ControlPanel\Globals\" />
+    <Folder Include="Scripts\Applications\ControlPanel\Globals\Controllers\" />
+    <Folder Include="Scripts\Applications\ControlPanel\Globals\Directives\" />
+    <Folder Include="Scripts\Applications\ControlPanel\Globals\Filters\" />
+    <Folder Include="Scripts\Applications\ControlPanel\Modules\" />
+    <Folder Include="Scripts\Applications\ControlPanel\Modules\Core\" />
+    <Folder Include="Scripts\Applications\ControlPanel\Modules\Core\Users\" />
+    <Folder Include="Scripts\Applications\ControlPanel\Modules\Core\Roles\" />
+    <Folder Include="Scripts\Applications\Secure\" />
+    <Folder Include="Scripts\Applications\Secure\Globals\" />
+    <Folder Include="Scripts\Applications\Secure\Modules\" />
+    <Folder Include="Scripts\Applications\Secure\Modules\Tickets\" />
+    <Folder Include="Scripts\Applications\Secure\Modules\Tickets\CheckIns\" />
+    <Folder Include="Scripts\Applications\Secure\Modules\Tickets\Checkout\" />
+    <Folder Include="Scripts\Applications\Secure\Modules\Tickets\Complete\" />
+    <Folder Include="Scripts\Applications\Secure\Modules\Tickets\Invoice\" />
+    <Folder Include="Scripts\Applications\Secure\Modules\Tickets\Orders\" />
+    <Folder Include="Scripts\Applications\Secure\Modules\Tickets\Payment\" />
+    <Folder Include="Scripts\Applications\Secure\Modules\Tickets\TicketHolders\" />
+    <Folder Include="Scripts\Globals\" />
+    <Folder Include="Scripts\Globals\Shared\" />
+    <Folder Include="Scripts\Globals\Shared\Directives\" />
+    <Folder Include="Scripts\Globals\Shared\Filters\" />
+    <Folder Include="Scripts\Globals\Shared\Infrastructure\" />
+    <Folder Include="Scripts\Globals\Shared\Services\" />
+  </ItemGroup>
+  <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
+</Project>
